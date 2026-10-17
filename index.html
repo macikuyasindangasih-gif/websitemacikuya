@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Madrasah Aliyah Cikuya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5ef;--surface:#ffffff;--ink:#16261d;--muted:#51655a;--green:#1d4d38;--green2:#2f6e52;--gold:#b98a24;--line:#d5ddd3;--onGreen:#f2f5ef;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101a15;--surface:#17251e;--ink:#e8efe9;--muted:#9db0a4;--green:#0c1f16;--green2:#5fae8a;--gold:#e0b04a;--line:#27382f;--onGreen:#e8efe9}}
+:root[data-theme="dark"]{--bg:#101a15;--surface:#17251e;--ink:#e8efe9;--muted:#9db0a4;--green:#0c1f16;--green2:#5fae8a;--gold:#e0b04a;--line:#27382f;--onGreen:#e8efe9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Nunito Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Lora,Georgia,serif;line-height:1.2;margin:0 0 .5em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:20;background:var(--green);color:var(--onGreen)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;flex-wrap:wrap}
+.brand{font-family:Lora,serif;font-weight:700;font-size:1.1rem;text-decoration:none}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:600;font-size:.95rem;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--gold)}
+.hero{background:var(--green);color:var(--onGreen);position:relative;overflow:hidden;padding:72px 0 88px}
+.hero svg{position:absolute;right:-80px;top:-40px;width:520px;max-width:90vw;opacity:.16;color:var(--gold)}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);max-width:15ch;margin-bottom:.4em}
+.hero p{max-width:52ch;font-size:1.1rem;opacity:.92}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:700;text-decoration:none;border:2px solid var(--gold)}
+.btn.primary{background:var(--gold);color:#1a1405}
+.btn.ghost{color:var(--onGreen)}
+section{padding:64px 0}
+section h2{font-size:clamp(1.6rem,4vw,2.2rem)}
+.lead{max-width:62ch;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:32px;border-top:2px solid var(--green2)}
+.facts div{padding:18px 20px 18px 0;border-bottom:1px solid var(--line)}
+.facts dt{font-size:.85rem;color:var(--muted)}
+.facts dd{margin:2px 0 0;font-family:Lora,serif;font-weight:700;font-size:1.25rem}
+.programs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:28px}
+.programs article{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--green2);padding:22px;border-radius:4px}
+.programs article:nth-child(2){border-left-color:var(--gold)}
+.programs h3{font-size:1.2rem}
+.programs p{margin:0;color:var(--muted);font-size:.97rem}
+.alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.news{list-style:none;padding:0;margin:28px 0 0}
+.news li{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.news time{color:var(--muted);font-size:.9rem}
+.news b{display:block;font-family:Lora,serif}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;margin-top:24px}
+.contact p{margin:.2em 0}
+footer{background:var(--green);color:var(--onGreen);padding:28px 0;font-size:.92rem}
+.note{font-size:.85rem;color:var(--muted);margin-top:20px}
+@media (max-width:560px){.news li{grid-template-columns:1fr;gap:2px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.logo{width:44px;height:44px;border-radius:8px;background:#fff;vertical-align:middle;margin-right:10px}
+.brand{display:inline-flex;align-items:center}
+.facts{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.vision{font-family:Lora,serif;font-size:clamp(1.25rem,3vw,1.7rem);line-height:1.4;max-width:30ch;margin:8px 0 0;padding-left:18px;border-left:5px solid var(--gold)}
+.misi{max-width:70ch;padding-left:1.3em;margin:12px 0 0}
+.misi li{margin-bottom:12px}
+.misi b{font-weight:700}
+.misi span{display:block;color:var(--muted);font-size:.95rem}
+table{border-collapse:collapse;margin-top:18px;min-width:min(100%,420px)}
+th,td{padding:10px 16px;border-bottom:1px solid var(--line);text-align:left}
+th{font-size:.9rem;color:var(--muted);font-weight:600}
+tfoot td{font-weight:700;border-top:2px solid var(--green2)}
+.programs h3 small{display:block;font:600 .85rem "Nunito Sans",sans-serif;color:var(--gold);margin-top:2px}
+.programs ul{margin:8px 0 0;padding-left:1.1em;color:var(--muted);font-size:.95rem}
+.scroll{overflow-x:auto}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#beranda"><img class="logo" alt="Logo MA Cikuya" src="data:image/jpeg;base64,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">MA Cikuya</a>
+    <nav aria-label="Menu utama">
+      <a href="#profil">Profil</a>
+      <a href="#program">Program</a>
+      <a href="#kegiatan">Ekstrakurikuler</a>
+      <a href="#berita">Berita</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<main id="beranda">
+  <div class="hero">
+    <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+      <rect x="50" y="50" width="100" height="100"/>
+      <rect x="50" y="50" width="100" height="100" transform="rotate(45 100 100)"/>
+      <circle cx="100" cy="100" r="50"/>
+      <rect x="70" y="70" width="60" height="60"/>
+      <rect x="70" y="70" width="60" height="60" transform="rotate(45 100 100)"/>
+      <circle cx="100" cy="100" r="70"/>
+      <circle cx="100" cy="100" r="92"/>
+    </svg>
+    <div class="wrap">
+      <h1>Madrasah Aliyah Cikuya</h1>
+      <p>Mewujudkan generasi Islami yang unggul, berprestasi, berkarakter, dan berdaya saing di era digital. Terakreditasi A.</p>
+      <div class="btns">
+        <a class="btn primary" href="#ppdb">Informasi pendaftaran</a>
+        <a class="btn ghost" href="#profil">Kenali madrasah kami</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="profil">
+    <div class="wrap">
+      <h2>Profil madrasah</h2>
+      <p class="lead">MAS Cikuya adalah madrasah aliyah swasta yang berdiri sejak 2012 di Kampung Cikuya, Kelurahan Sindangasih, Kecamatan Cikatomas, Jawa Barat. Madrasah ini diselenggarakan oleh Yayasan Dikara Cendekia dan berafiliasi dengan Nahdlatul Ulama.</p>
+      <dl class="facts">
+        <div><dt>Akreditasi</dt><dd>A (2024)</dd></div>
+        <div><dt>Tahun berdiri</dt><dd>2012</dd></div>
+        <div><dt>Status</dt><dd>Swasta</dd></div>
+        <div><dt>Waktu belajar</dt><dd>Pagi</dd></div>
+        <div><dt>Kategori</dt><dd>Madrasah reguler</dd></div>
+        <div><dt>NSM</dt><dd>131232060083</dd></div>
+        <div><dt>NPSN</dt><dd>69976337</dd></div>
+        <div><dt>Penyelenggara</dt><dd>Yayasan Dikara Cendekia</dd></div>
+        <div><dt>Afiliasi</dt><dd>Nahdlatul Ulama</dd></div>
+        <div><dt>Izin operasional</dt><dd>SK No. 976, 16 Juni 2017</dd></div>
+      </dl>
+      <h3 style="margin-top:44px">Jumlah peserta didik</h3>
+      <div class="scroll"><table>
+        <thead><tr><th>Kelas</th><th>Laki-laki</th><th>Perempuan</th><th>Jumlah</th></tr></thead>
+        <tbody>
+          <tr><td>X</td><td>11</td><td>12</td><td>23</td></tr>
+          <tr><td>XI</td><td>8</td><td>7</td><td>15</td></tr>
+          <tr><td>XII</td><td>8</td><td>7</td><td>15</td></tr>
+        </tbody>
+        <tfoot><tr><td>Total</td><td>27</td><td>26</td><td>53</td></tr></tfoot>
+      </table></div>
+      <h3 style="margin-top:44px">Visi</h3>
+      <p class="vision">Terwujudnya generasi Islami yang unggul, berprestasi, berkarakter, dan berdaya saing di era digital.</p>
+      <h3 style="margin-top:36px">Misi</h3>
+      <ol class="misi"><li><b>Mewujudkan generasi Islami</b><span>Menanamkan nilai Islam lewat pembelajaran, pembiasaan ibadah, dan keteladanan akhlak.</span></li><li><b>Meningkatkan mutu pendidikan dan keunggulan akademik</b><span>Pembelajaran inovatif yang berpusat pada peserta didik.</span></li><li><b>Mengembangkan prestasi akademik dan nonakademik</b><span>Memfasilitasi bakat dan minat hingga kompetisi tingkat lokal, regional, dan nasional.</span></li><li><b>Membentuk peserta didik berkarakter dan berakhlak mulia</b><span>Disiplin, jujur, tanggung jawab, mandiri, santun, dan toleran.</span></li><li><b>Meningkatkan kompetensi digital dan kecakapan abad ke-21</b><span>Memanfaatkan teknologi digital dan AI secara kreatif, etis, dan aman.</span></li><li><b>Menumbuhkan kemandirian, kewirausahaan, dan daya saing</b><span>Keterampilan hidup, komunikasi, kolaborasi, dan jiwa wirausaha.</span></li><li><b>Mewujudkan lingkungan madrasah yang aman, inklusif, dan berbudaya positif</b><span>Bersih, sehat, ramah anak, dan bebas dari perundungan dan kekerasan.</span></li><li><b>Meningkatkan profesionalisme pendidik dan tenaga kependidikan</b><span>Pengembangan keprofesian berkelanjutan dan pemanfaatan teknologi.</span></li><li><b>Memperkuat kemitraan dan peran serta masyarakat</b><span>Bekerja sama dengan orang tua, komite, masyarakat, pemerintah, dunia usaha, dan perguruan tinggi.</span></li><li><b>Membudayakan kepedulian terhadap lingkungan dan tanah air</b><span>Cinta tanah air, penghargaan budaya bangsa, dan sikap moderat.</span></li></ol>
+    </div>
+  </section>
+
+  <section id="program" class="alt">
+    <div class="wrap">
+      <h2>Program utama pembelajaran</h2>
+      <p class="lead">Delapan program yang menjalankan Kurikulum Merdeka dan nilai Panca Cinta di madrasah.</p>
+      <div class="programs"><article><h3>Pembelajaran intrakurikuler berkualitas<small>Kurikulum Merdeka</small></h3><ul><li>Pembelajaran berdiferensiasi sesuai kesiapan dan minat</li><li>Asesmen diagnostik, formatif, dan sumatif</li><li>Remedial, pengayaan, dan pendampingan belajar</li></ul></article><article><h3>Pembiasaan keagamaan dan akhlakul karimah<small>Cinta Allah dan Rasul-Nya</small></h3><ul><li>Doa, tadarus Al-Qur’an, dan ibadah harian</li><li>Salat berjamaah, kultum, dan kajian keislaman</li><li>Kegiatan sosial dan berbagi</li></ul></article><article><h3>Pembelajaran mendalam dan proyek kontekstual<small>Cinta terhadap Ilmu</small></h3><ul><li>Pembelajaran berbasis masalah dan proyek</li><li>Penguatan literasi, numerasi, dan berpikir komputasional</li><li>Karya, prototipe, dan media edukasi</li></ul></article><article><h3>Literasi digital, koding, dan kecerdasan artifisial<small>Daya Saing Era Digital</small></h3><ul><li>Koding, pengolahan data, dan pemecahan masalah</li><li>Penggunaan AI secara kritis, etis, dan bertanggung jawab</li><li>Keamanan data dan pencegahan perundungan siber</li></ul></article><article><h3>Madrasah peduli lingkungan<small>Cinta terhadap Lingkungan</small></h3><ul><li>Kebersihan, pemilahan sampah, dan penghijauan</li><li>Pengurangan plastik sekali pakai</li><li>Proyek “Satu Kelas, Satu Aksi Lingkungan”</li></ul></article><article><h3>Karakter, empati, dan moderasi beragama<small>Cinta Diri dan Sesama</small></h3><ul><li>Pengelolaan emosi dan budaya saling menghormati</li><li>Kelas tanpa perundungan dan musyawarah kelas</li><li>Bimbingan konseling dan bakti sosial</li></ul></article><article><h3>Cinta tanah air dan pelestarian budaya<small>Cinta Tanah Air</small></h3><ul><li>Upacara bendera dan peringatan hari besar nasional</li><li>Pelestarian budaya lokal dan bahasa daerah</li><li>Dokumentasi sejarah lokal dan pameran budaya</li></ul></article><article><h3>Bakat, prestasi, dan kewirausahaan<small>Prestasi dan Kemandirian</small></h3><ul><li>Pembinaan olimpiade dan kompetisi keagamaan</li><li>Proyek wirausaha yang halal, jujur, dan bertanggung jawab</li><li>Pameran karya, bazar, dan pendampingan studi lanjut</li></ul></article></div>
+    </div>
+  </section>
+
+  <section id="kegiatan">
+    <div class="wrap">
+      <h2>Ekstrakurikuler</h2>
+      <p class="lead">Peserta didik dapat mengembangkan bakat dan minat melalui kegiatan berikut.</p>
+      <div class="programs">
+        <article><h3>Pramuka</h3></article>
+        <article><h3>Paskibra</h3></article>
+        <article><h3>Marching band</h3></article>
+        <article><h3>Band</h3></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="ppdb" class="alt">
+    <div class="wrap">
+      <h2>Penerimaan peserta didik baru</h2>
+      <p class="lead">Pendaftaran dibuka setiap tahun ajaran baru. Hubungi panitia untuk jadwal, syarat, dan biaya terbaru.</p>
+      <div class="btns"><a class="btn primary" href="#kontak">Hubungi panitia</a></div>
+    </div>
+  </section>
+
+  <section id="berita">
+    <div class="wrap">
+      <h2>Berita terbaru</h2>
+      <ul class="news">
+        <li><time>[tanggal]</time><div><b>Judul berita pertama</b>Ringkasan singkat satu atau dua kalimat tentang kegiatan madrasah.</div></li>
+        <li><time>[tanggal]</time><div><b>Judul berita kedua</b>Ringkasan singkat pengumuman atau prestasi siswa.</div></li>
+        <li><time>[tanggal]</time><div><b>Judul berita ketiga</b>Ringkasan singkat agenda yang akan datang.</div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontak" class="alt">
+    <div class="wrap">
+      <h2>Kontak dan lokasi</h2>
+      <div class="contact">
+        <div>
+          <p><strong>Alamat</strong></p>
+          <p>Kp. Cikuya, RT 4 RW 1, Kelurahan Sindangasih, Kecamatan Cikatomas, Jawa Barat 46193</p>
+          <p><a href="https://www.google.com/maps?q=-7.5669699,108.3038624" target="_blank" rel="noopener">Lihat di peta</a></p>
+          <p style="margin-top:14px"><strong>Waktu belajar</strong></p>
+          <p>Pagi hari</p>
+        </div>
+        <div>
+          <p><strong>Telepon / WhatsApp</strong></p>
+          <p><a href="https://wa.me/6282136583003" target="_blank" rel="noopener">0821-3658-3003</a></p>
+          <p style="margin-top:14px"><strong>Email</strong></p>
+          <p><a href="mailto:macikuya.sindangasih@gmail.com">macikuya.sindangasih@gmail.com</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Madrasah Aliyah Cikuya. Seluruh hak dilindungi.</div>
+</footer>
+</body>
+</html>
